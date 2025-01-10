@@ -12,6 +12,7 @@ import { Download } from "lucide-react";
 import download from "downloadjs";
 import { format } from "date-fns";
 import * as htmlToImage from "html-to-image";
+import { Separator } from "@/components/ui/separator";
 
 export default function Home() {
   const [text, setText] = useState(
@@ -62,7 +63,7 @@ export default function Home() {
         {/* Preview */}
         <div className="relative">
           <div
-            className={`bg-gradient-to-br ${currentGradient} p-8 py-12 w-full min-h-[400px] flex items-center`}
+            className={`bg-gradient-to-br ${currentGradient} p-8 py-12 w-full min-h-[300px] flex items-center`}
             style={{
               borderRadius: `${backgroundRoundedness}px`,
             }}
@@ -82,9 +83,10 @@ export default function Home() {
                     </p>
                   ))}
                 </div>
-                <div className="flex items-center justify-between text-sm text-gray-600 pt-4">
+                <Separator className="w-full text-gray-600 h-[0.08px]" />
+                <div className="flex items-center justify-between text-sm text-gray-600">
                   <div className="flex items-center gap-2">
-                    {authorImage && ( // Display image if available
+                    {authorImage && (
                       <img
                         src={authorImage}
                         alt="Author"
@@ -94,7 +96,7 @@ export default function Home() {
                     <span className="text-base">{authorName}</span>
                   </div>
                   {showTimestamp && (
-                    <span>{format(new Date(), "MM-dd-yyyy HH:mm a")}</span>
+                    <span>{format(new Date(), "MMMM-dd-yyyy HH:mm a")}</span>
                   )}
                 </div>
               </div>
