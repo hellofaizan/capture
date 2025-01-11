@@ -16,7 +16,7 @@ import { Separator } from "@/components/ui/separator";
 
 export default function Home() {
   const [text, setText] = useState(
-    "The Ship of Theseus is a philosophical thought experiment that asks whether an object is the same object after all of its original parts have been replaced. The experiment is also known as Theseus's Paradox.\n\nThe thought experiment was proposed by the ancient Greek writer Plutarch in Life of Theseus. It involves a ship that was originally made of wood, but over time, each piece of the ship is replaced with a metal part. The question is whether the ship that remains after all the replacements is the same ship as the original ship."
+    "DEMO TEXT!!! The Ship of Theseus is a philosophical thought experiment that asks whether an object is the same object after all of its original parts have been replaced. The experiment is also known as Theseus's Paradox.\n\nThe thought experiment was proposed by the ancient Greek writer Plutarch in Life of Theseus. It involves a ship that was originally made of wood, but over time, each piece of the ship is replaced with a metal part."
   );
   const [authorName, setAuthorName] = useState("Jon Snow");
   const [showTimestamp, setShowTimestamp] = useState(true);
@@ -41,6 +41,10 @@ export default function Home() {
     "from-amber-200 to-amber-300",
     "from-violet-200 to-violet-300",
     "from-teal-200 to-teal-300",
+    "from-pink-500 to-rose-500",
+    "from-cyan-500 to-blue-500",
+    "from-violet-600 to-indigo-600",
+    "from-emerald-500 to-emerald-900"
   ];
 
   const handleGradientClick = (gradient: string, index: number) => {
@@ -59,11 +63,11 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gray-50 p-4 md:p-8">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center justify-center">
         {/* Preview */}
         <div className="relative">
           <div
-            className={`bg-gradient-to-br ${currentGradient} p-8 py-12 w-full min-h-[300px] flex items-center`}
+            className={`bg-gradient-to-br ${currentGradient} p-8 py-12 w-full min-h-[400px] flex items-center`}
             style={{
               borderRadius: `${backgroundRoundedness}px`,
             }}
@@ -105,22 +109,22 @@ export default function Home() {
         </div>
 
         {/* Controls */}
-        <div className="space-y-6">
+        <div className="space-y-6 max-w-lg">
           <div className="space-y-4">
             <Button onClick={handleDownload} className="w-full" size="lg">
               <Download className="w-4 h-4 mr-2" />
               Download Image
             </Button>
-            <div className="space-y-2">
+            <div className="space-y-1">
               <Label>Text</Label>
               <Textarea
                 value={text}
                 onChange={(e) => setText(e.target.value)}
-                className="min-h-[200px]"
+                className="min-h-[180px]"
               />
             </div>
             <div className="flex gap-2 items-center w-full">
-              <div className="space-y-2 flex-1">
+              <div className="space-y-1 flex-1">
                 <Label>Author name</Label>
                 <Input
                   value={authorName}
@@ -128,7 +132,7 @@ export default function Home() {
                 />
               </div>
 
-              <div className="space-y-2 flex-1">
+              <div className="space-y-1 flex-1">
                 <Label>Author image</Label>
                 <Input
                   type="file"
@@ -157,9 +161,9 @@ export default function Home() {
           </div>
 
           <div className="space-y-4">
-            <div className="space-y-4">
+            <div className="space-y-2">
               <Label>Background style</Label>
-              <div className="grid grid-cols-4 gap-2">
+              <div className="grid grid-cols-5 gap-2">
                 {gradients.map((gradient, index) => (
                   <button
                     key={index}

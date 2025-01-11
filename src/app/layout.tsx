@@ -16,9 +16,9 @@ export const metadata: Metadata = {
   title: "Capture - Text to Image",
   description: "Text to Image tool by Mohammad Faizan",
   openGraph: {
-    title: 'Capture - Text to Image',
-    description: 'Text to Image tool by Mohammad Faizan',
-    images: ['/og-image.png'],
+    title: "Capture - Text to Image",
+    description: "Text to Image tool by Mohammad Faizan",
+    images: ["/og-image.png"],
   },
 };
 
