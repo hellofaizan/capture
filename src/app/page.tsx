@@ -13,6 +13,7 @@ import download from "downloadjs";
 import { format } from "date-fns";
 import * as htmlToImage from "html-to-image";
 import { Separator } from "@/components/ui/separator";
+import Branding from "@/components/branding";
 
 export default function Home() {
   const [text, setText] = useState(
@@ -44,7 +45,7 @@ export default function Home() {
     "from-pink-500 to-rose-500",
     "from-cyan-500 to-blue-500",
     "from-violet-600 to-indigo-600",
-    "from-emerald-500 to-emerald-900"
+    "from-emerald-500 to-emerald-900",
   ];
 
   const handleGradientClick = (gradient: string, index: number) => {
@@ -62,7 +63,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 p-4 md:p-8">
+    <div className="min-h-screen bg-gray-50 p-4 md:p-8 flex flex-col gap-8">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center justify-center">
         {/* Preview */}
         <div className="relative">
@@ -218,6 +219,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Branding />
     </div>
   );
 }
