@@ -6,7 +6,7 @@ export default function Branding() {
   return (
     <div className="w-full text-center text-xs md:text-sm flex items-center justify-center gap-1">
       Designed by{" "}
-      <Link href={"https://mohammadfaizan.in"} className="text-green-500">
+      <Link href={"https://mohammadfaizan.in"} className="text-green-500" target="_blank">
         Mohammad Faizan
       </Link>
     </div>
