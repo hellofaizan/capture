@@ -1,6 +1,16 @@
 # Capture Text
 
-First, run the development server:
+![image](https://github.com/user-attachments/assets/c95f06fb-3526-40dc-93dc-b00535838b6f)
+
+First, install dependencies
+
+```bash
+npm install
+# or
+yarn
+```
+
+Then run in local development
 
 ```bash
 npm run dev
